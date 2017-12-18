@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Uber Eat's Most Popular</title>
+</head>
+
+<body>
+{{ range $key, $value := . }}
+    <h2>{{ $value.StoreTitle }}</h2>
+    {{ range $item := $value.Items }}
+        <img height='220' width='275' src="{{ $item.ImageURL}}">
+    {{ end }}
+{{ end }}
+</body>
+</html>
